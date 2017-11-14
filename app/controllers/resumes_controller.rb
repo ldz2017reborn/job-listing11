@@ -1,4 +1,9 @@
 class ResumesController < ApplicationController
+
+  def index
+    @job = Job.all
+  end
+
   def new
     @job = Job.find(params[:job_id])
     @resume = Resume.new
